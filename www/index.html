@@ -29,6 +29,7 @@
     <!-- TODO: Add your email and we'll show an avatar in the leaderboard. (And
     you'll get more points!) -->
     <meta name="email" content="shane@zephyr-cloud.io" />
+    
   </head>
 
   <body>
@@ -55,10 +56,31 @@
           alt="A photo of the Bay Bridge in San Francisco"
         />
       </section>
+      <div class="panel">
+        <button id="ccc-vote">Pick me, pick me!</button>
+        <div>
+          <span>Count:</span>
+          <b id="ccc-vote-count">0</b>
+        </div>
+      </div>
+  <!-- TODO: Add some JavaScript to handle the clicks and post to the blob store API function -->
+</section>
+
+      
 
     </main>
 <netlify-edge-include
       href="https://compose-challenge.netlify.app/partials/footer"
     ></netlify-edge-include>
   </body>
+  <script>
+  const button = document.getElementById('ccc-vote');
+  const count = document.getElementById('ccc-vote-count');
+  button.addEventListener('click', async (event) => {
+    const response = await fetch('/api/count', {
+      method: 'POST',
+    });
+    count.textContent = await response.text();
+  });
+</script>
 </html>
