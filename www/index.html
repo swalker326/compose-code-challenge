@@ -5,9 +5,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Netlify Compose Code Challenge</title>
-    <netlify-edge-include
-      href="https://compose-challenge.netlify.app/partials/add-image-cdn"
-    ></netlify-edge-include>
     <link
       rel="preload"
       href="https://example-styles.netlify.app/fonts/PacaembuVar-latin.woff2"
@@ -54,9 +51,13 @@
         />
       </section>
 
-      <!-- This looks like another good place for an edge include! -->
+      <netlify-edge-include
+        href="https://compose-challenge.netlify.app/partials/add-image-cdn"
+      ></netlify-edge-include>
+      <netlify-edge-include href="https://compose-challenge.netlify.app/partials/add-blob-storage"></netlify-edge-include>
+</netlify-edge-include>
     </main>
-    <netlify-edge-include
+<netlify-edge-include
       href="https://compose-challenge.netlify.app/partials/footer"
     ></netlify-edge-include>
   </body>
