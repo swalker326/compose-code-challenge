@@ -2,7 +2,6 @@
   <!DOCTYPE html>
 
   <head>
-    <netlify-edge-include href="https://compose-challenge.netlify.app/partials/add-image-cdn"></netlify-edge-include>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Netlify Compose Code Challenge</title>
@@ -38,11 +37,14 @@
     <main>
       <partial name="step-1"></partial>
       <partial name="step-2"></partial>
+      <netlify-edge-include href="https://compose-challenge.netlify.app/partials/add-image-cdn"></netlify-edge-include>
 
       <!-- This looks like a good place for an edge include. -->
 
       <section>
         <!-- Maybe an image or two will go here...? -->
+         <img src="/images/bay-bridge.jpg" alt="A photo of the Bay Bridge in San Francisco" />
+
       </section>
 
       <!-- This looks like another good place for an edge include! -->
