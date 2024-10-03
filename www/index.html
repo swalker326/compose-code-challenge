@@ -69,20 +69,20 @@
       
 
     </main>
+    <script>
+    const button = document.getElementById('ccc-vote');
+    const count = document.getElementById('ccc-vote-count');
+    button.addEventListener('click', async (event) => {
+      const response = await fetch('/api/count', {
+        method: 'POST',
+      });
+      count.textContent = await response.text();
+    });
+    </script>
+    <netlify-edge-include href="https://compose-challenge.netlify.app/partials/more-info"></netlify-edge-include>
 <netlify-edge-include
       href="https://compose-challenge.netlify.app/partials/footer"
     ></netlify-edge-include>
   </body>
-  <script>
-  const button = document.getElementById('ccc-vote');
-  const count = document.getElementById('ccc-vote-count');
-  button.addEventListener('click', async (event) => {
-    const response = await fetch('/api/count', {
-      method: 'POST',
-    });
-    count.textContent = await response.text();
-  });
-</script>
-<netlify-edge-include href="https://compose-challenge.netlify.app/partials/more-info"></netlify-edge-include>
 </netlify-edge-include>
 </html>
