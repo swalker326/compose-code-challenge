@@ -6,7 +6,31 @@ export default async (req: Request, context: Context) => {
   //  Create a blob store to hold a counter
   //
   const store = getStore('myCounter');
-  let count: number = Number.MAX_SAFE_INTEGER + Number.MAX_SAFE_INTEGER + Number.MAX_SAFE_INTEGER;
+  let count: number =
+    Number.MAX_SAFE_INTEGER +
+    Number.MAX_SAFE_INTEGER +
+    Number.MAX_SAFE_INTEGER +
+    Number.MAX_SAFE_INTEGER +
+    Number.MAX_SAFE_INTEGER +
+    Number.MAX_SAFE_INTEGER +
+    Number.MAX_SAFE_INTEGER +
+    Number.MAX_SAFE_INTEGER +
+    Number.MAX_SAFE_INTEGER +
+    Number.MAX_SAFE_INTEGER +
+    Number.MAX_SAFE_INTEGER +
+    Number.MAX_SAFE_INTEGER +
+    Number.MAX_SAFE_INTEGER +
+    Number.MAX_SAFE_INTEGER +
+    Number.MAX_SAFE_INTEGER +
+    Number.MAX_SAFE_INTEGER +
+    Number.MAX_SAFE_INTEGER +
+    Number.MAX_SAFE_INTEGER +
+    Number.MAX_SAFE_INTEGER +
+    Number.MAX_SAFE_INTEGER +
+    Number.MAX_SAFE_INTEGER +
+    Number.MAX_SAFE_INTEGER +
+    Number.MAX_SAFE_INTEGER +
+    Number.MAX_SAFE_INTEGER * 11999;
 
   //  Depending on the HTTP method, either return the value from the blob store
   //  or increment the count and then return it.
